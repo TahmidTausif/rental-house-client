@@ -6,8 +6,8 @@ A modern web application for showcasing Housing listings. Built with NextJS, Rea
 
 ## 🌐 Live Links
 
-- **Client**: [bike-museum-five.vercel.app](https://rental-house-client.vercel.app/)
-- **Server**: [bike-museum-server-tan.vercel.app](https://rental-house-server-mu.vercel.app/ 
+- **Client**: [rental-house-client.vercel.app](https://rental-house-client.vercel.app/)
+- **Server**: [rental-house-server-mu.vercel.app](https://rental-house-server-mu.vercel.app/ 
 )
 
 ## 🧑‍💼 Admin Access
@@ -32,8 +32,8 @@ To log in as an admin, use the credentials below:
 
 ## 💻 Source Code
 
-- **Client Repo**: [GitHub - Bike Museum Client](https://github.com/TahmidTausif/rental-house-client)
-- **Server Repo**: [GitHub - Bike Museum Server](https://github.com/TahmidTausif/rental-house-server)
+- **Client Repo**: [GitHub - rental-house-client](https://github.com/TahmidTausif/rental-house-client)
+- **Server Repo**: [GitHub - rental-house-server](https://github.com/TahmidTausif/rental-house-server)
 
 ---
 
