@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Rental House
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A modern web application for showcasing Housing listings. Built with NextJS, React, Vite, Tailwind CSS on the frontend, and Node.js, Express, MongoDB on the backend.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Live Links
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Client**: [rental-house-client.vercel.app](https://rental-house-client.vercel.app/)
+- **Server**: [rental-house-server-mu.vercel.app](https://rental-house-server-mu.vercel.app/ 
+)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧑‍💼 Admin Access
 
-## Learn More
+To log in as an admin, use the credentials below:
 
-To learn more about Next.js, take a look at the following resources:
+- **Email**: `tahmidtausif4949@gmail.com `  
+- **Password**: `369963`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Frontend**:
+- NextJS
+- Vite
+- React
+- Tailwind CSS
 
-## Deploy on Vercel
+**Backend**:
+- Node.js
+- Express.js
+- MongoDB
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💻 Source Code
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Client Repo**: [GitHub - rental-house-client](https://github.com/TahmidTausif/rental-house-client)
+- **Server Repo**: [GitHub - rental-house-server](https://github.com/TahmidTausif/rental-house-server)
+
+---
+
+Let me know if you'd like badges, images, setup instructions, or deployment guides added too!
