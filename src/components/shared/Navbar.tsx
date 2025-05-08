@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useSession, signOut } from "next-auth/react"; // Importing useSession and signOut from next-auth/react
+import { useSession, signOut } from "next-auth/react"; 
 import logo from "../../assets/rental.png";
 import PrimaryButton from "./PrimaryButton";
 import SecondaryButton from "./SecondaryButton";
@@ -58,7 +58,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={` sticky top-0 z-30 w-full flex items-center justify-between bg-[#b2b2f1] mx-auto px-14 py-4 text-white  ${scrolled ? "md:bg-[#b2b2f1] md:py-2" : "bg-transparent"
+      className={` sticky top-0 z-30 w-full flex items-center justify-between transition-all duration-300 mx-auto px-8 md:px-14 py-4 text-white  ${scrolled ? "bg-[#b2b2f1]/80 backdrop-blur-md md:py-2" : "bg-transparent"
         }`}
       style={navbarStyles}
     >

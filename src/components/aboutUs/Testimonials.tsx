@@ -47,7 +47,7 @@ function Testimonials() {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20 lg:w-11/12 mx-auto">
       <div className="mx-auto px-4">
         <div className="space-y-4 text-center mb-12">
           <SectionHeader title="What our Users say" subtitle="OUR REVIEWS" />

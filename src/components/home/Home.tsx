@@ -21,8 +21,9 @@ const Home = () => {
      <PlatformStats/>
     <Faq/>
     <Testimonials/>
-    <JoinUsCTA/>
+    
     <Marquee/>
+    <JoinUsCTA/>
     </div>
   );
 };

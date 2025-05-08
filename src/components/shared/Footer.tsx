@@ -6,12 +6,12 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <div className="bg-primary">
+    <div className="bg-gradient-to-l from-primary/80 to-primary">
       {/* Top Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-10 mx-auto lg:w-4/5  text-gray-300">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-14 mx-auto lg:w-5/6 text-gray-300">
         
         {/* Services */}
-        <div data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-duration="500">
+        <div data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-duration="500" className="text-center">
           <h2 className="text-xl font-bold mb-4 text-white">Services</h2>
           <ul className="space-y-2">
             <li><Link href="/" className="hover:text-gray-100 transition">Property Selling</Link></li>
@@ -22,7 +22,7 @@ function Footer() {
         </div>
 
         {/* Company */}
-        <div data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="300">
+        <div data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="300" className="text-center">
           <h2 className="text-xl font-bold mb-4 text-white">Company</h2>
           <ul className="space-y-2">
             <li><a href="tel:01911309454" className="hover:text-gray-100 transition">Contact: 01911309454</a></li>
@@ -33,7 +33,7 @@ function Footer() {
         </div>
 
         {/* Legal */}
-        <div data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="600">
+        <div data-aos="fade-down" data-aos-easing="ease-in-sine" data-aos-delay="600" className="text-center">
           <h2 className="text-xl font-bold mb-4 text-white">Legal</h2>
           <ul className="space-y-2">
             <li><Link href="/terms" className="hover:text-gray-100 transition">Terms of Use</Link></li>
@@ -44,8 +44,8 @@ function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t px-6  text-gray-800 lg:w-4/5 mx-auto py-4">
-        <Link href="/" className="flex items-center gap-2">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/30 px-6  text-gray-800 lg:w-11/12 mx-auto py-4">
+        <Link href="/" className="flex flex-col md:flex-row items-center gap-2">
           <Image src="/rental.png" alt="logo" width={82} height={56} className=" rounded-full bg-white/80" />
           <div>
             <h3 className="text-lg font-bold text-white bg-clip-text">
