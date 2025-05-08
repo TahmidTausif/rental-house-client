@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { FaTwitter } from "react-icons/fa";
-import { IoLogoYoutube } from "react-icons/io";
-import { FaSquareFacebook } from "react-icons/fa6";
+import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+
 import Image from "next/image";
 
 function Footer() {
@@ -46,7 +45,7 @@ function Footer() {
       {/* Bottom Section */}
       <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/30 px-6  text-gray-800 lg:w-11/12 mx-auto py-4">
         <Link href="/" className="flex flex-col md:flex-row items-center gap-2">
-          <Image src="/rental.png" alt="logo" width={82} height={56} className=" rounded-full bg-white/80" />
+          <Image src="/rental.png" alt="logo" width={60} height={40} className=" rounded-full bg-white/80" />
           <div>
             <h3 className="text-lg font-bold text-white bg-clip-text">
               Rental <span className="text-white">House</span> Ltd.
@@ -56,9 +55,9 @@ function Footer() {
         </Link>
 
         <div className="flex gap-4 text-2xl">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-3xl text-sky-400 transition"><FaTwitter /></a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-3xl text-secondary transition"><IoLogoYoutube /></a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-3xl text-blue-200 transition"><FaSquareFacebook /></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-3xl text-white transition"><FaTwitter /></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-3xl text-white transition"><FaLinkedin /></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-3xl text-white transition"><FaFacebook /></a>
         </div>
       </div>
     </div>

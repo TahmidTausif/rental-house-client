@@ -9,7 +9,7 @@ function Faq() {
         title="Frequently Asked Questions"
         subtitle="HAVE QUESTIONS?"
       ></SectionHeader>
-      <section className="container mx-auto  mb-36 px-4 ">
+      <section className="container mx-auto  mb-10 px-4 ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6 lg:px-10">
           {/* FAQ Image */}
           <div className="flex items-center justify-center">

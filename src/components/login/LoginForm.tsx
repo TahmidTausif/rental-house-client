@@ -43,6 +43,12 @@ const LoginForm = () => {
     }
   };
 
+  const handleAdminCredentials = () => {
+    
+    setEmail("tahmidtausif4949@gmail.com"); 
+    setPassword("369963"); 
+  };
+
   if (isLoading) return <Loader />;
   return (
     <div className="flex justify-center items-center min-h-screen p-6">
@@ -93,6 +99,16 @@ const LoginForm = () => {
             </Link>
           </div>
         </form>
+
+        <div className="text-center mt-4">
+          <PrimaryButton
+            type="button"
+            customClass="w-full py-3 px-4 text-white "
+            onClick={handleAdminCredentials}
+          >
+            Autofill Admin Credentials
+          </PrimaryButton>
+        </div>
       </div>
     </div>
   );

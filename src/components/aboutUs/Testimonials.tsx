@@ -5,6 +5,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import { FaQuoteLeft } from "react-icons/fa";
 
 function Testimonials() {
   const testimonials = [
@@ -47,7 +48,7 @@ function Testimonials() {
   ];
 
   return (
-    <section className="py-20 lg:w-11/12 mx-auto">
+    <section className="py-10 lg:w-11/12 mx-auto">
       <div className="mx-auto px-4">
         <div className="space-y-4 text-center mb-12">
           <SectionHeader title="What our Users say" subtitle="OUR REVIEWS" />
@@ -57,10 +58,10 @@ function Testimonials() {
           slidesPerView={3}
           spaceBetween={30}
           loop={true}
-          
+
           autoplay={{ delay: 3000 }}
           modules={[Pagination, Autoplay]}
-          className="mySwiper relative z-40 mb-36 py-20"  
+          className="mySwiper relative z-40 mb-10 py-20"
           style={{
             paddingTop: "20px",   // Add padding directly here
             paddingBottom: "20px", // Add padding directly here
@@ -82,7 +83,10 @@ function Testimonials() {
         >
           {testimonials.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="backdrop-blur-md bg-primary/5 rounded-xl shadow-md border border-white/20 p-6  text-center max-w-md mx-auto flex flex-col h-[250px]">
+              <div className=" relative backdrop-blur-md bg-primary/5 rounded-xl shadow-md border border-white/20 p-6  text-center max-w-md mx-auto flex flex-col h-[250px]">
+                <div className="absolute top-5 left-5 text-primary text-5xl opacity-40">
+                  <FaQuoteLeft className="" />
+                </div>
                 <Image
                   src={item.img}
                   alt={item.name}

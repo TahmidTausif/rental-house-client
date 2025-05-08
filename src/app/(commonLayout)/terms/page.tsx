@@ -15,14 +15,14 @@ const TermsOfService = () => {
         />
       </Head>
 
-      <main className="bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+      <main className="bg-white text-gray-800  transition-colors duration-300">
         {/* Hero Section */}
         <Hero img='https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80' title="Terms & Conditions"/>
        
 
         {/* Content Section */}
         <div className="max-w-5xl mx-auto px-4 md:px-6 py-12 md:py-16 space-y-12">
-          <p className="text-gray-600 dark:text-gray-300 text-center">
+          <p className="text-gray-600  text-center">
             Last updated: April 2025
           </p>
 
@@ -65,9 +65,9 @@ const TermsOfService = () => {
                   If you have any questions about these Terms, please contact us at:{' '}
                   <a
                     href="mailto:support@basafinder.com"
-                    className="text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 font-medium underline"
+                    className="text-blue-600 hover:text-blue-500   font-medium underline"
                   >
-                    support@basafinder.com
+                    support@rental-house.com
                   </a>
                 </>
               ),
@@ -75,7 +75,7 @@ const TermsOfService = () => {
           ].map((section, idx) => (
             <article key={idx} className="space-y-4">
               <h2 className="text-xl md:text-2xl font-semibold">{section.title}</h2>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{section.content}</p>
+              <p className="text-gray-700  leading-relaxed">{section.content}</p>
             </article>
           ))}
         </div>
