@@ -8,7 +8,8 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { use } from "react";
+import { use, useEffect } from "react";
+import { useState } from "react";
 import {
   FaMapMarkerAlt,
   FaRegCheckSquare,
@@ -20,6 +21,8 @@ const PropertyDetails = ({ params }: any) => {
   const router = useRouter();
   const { id }: any = use(params);
   const [data, isPending] = useSingleListing(id);
+
+
 
   const property = data?.data;
 
@@ -53,6 +56,13 @@ const PropertyDetails = ({ params }: any) => {
     }
   };
 
+  const imageArray: string[] = Object.values(property?.images || {}).filter(Boolean) as string[];
+  const [mainImage, setMainImage] = useState<string | null>(imageArray[0] ?? null);
+
+  useEffect(() => {
+    setMainImage(imageArray[0] ?? null);
+  }, [property]);
+
   if (isPending) {
     return <Loader />;
   }
@@ -73,7 +83,7 @@ const PropertyDetails = ({ params }: any) => {
             </p>
           </div>
           <p className="text-red-600 text-xl md:text-2xl font-semibold ">
-            {property?.price} /-
+          ৳{property?.price}/month
           </p>
         </div>
 
@@ -92,16 +102,41 @@ const PropertyDetails = ({ params }: any) => {
           <div>
             {/* Main Image */}
             <div className="relative w-full h-64 md:h-[400px] mb-6 rounded-lg overflow-hidden">
-              <Image
-                src={property?.images?.img1}
-                alt="property"
-                fill
-                className="object-cover"
-              />
+              {mainImage ? (
+                <Image
+                  src={mainImage}
+                  alt="property"
+                  fill
+                  className="object-cover"
+                />
+              ) : (
+                <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-500">
+                  No image available
+                </div>
+              )}
               <span className="absolute top-4 left-4 bg-secondary text-white text-xs font-semibold px-3 py-1 rounded">
                 For Rent
               </span>
             </div>
+            <div className="flex gap-2 overflow-x-auto mb-6">
+              {imageArray.map((img, index) => (
+                <div
+                  key={index}
+                  className={`w-20 h-20 rounded overflow-hidden cursor-pointer border-2 ${mainImage === img ? "border-red-500" : "border-transparent"
+                    }`}
+                  onClick={() => setMainImage(img)}
+                >
+                  <Image
+                    src={img}
+                    alt={`Thumbnail ${index + 1}`}
+                    width={80}
+                    height={80}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              ))}
+            </div>
+
 
             {/* Description */}
             <div className="mb-10">
@@ -114,16 +149,16 @@ const PropertyDetails = ({ params }: any) => {
             </div>
           </div>
 
-      {/* Floor Plan */}
-      <div className="mb-10">
-        <h3 className="text-2xl lg:text-3xl font-semibold mb-4">Floor Plans</h3>
-        <Image
-          src={property?.flatPlan}
-          alt="Floor Plan"
-          width={700}
-          height={500}
-        />
-      </div>
+          {/* Floor Plan */}
+          <div className="mb-10">
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-4">Floor Plans</h3>
+            <Image
+              src={property?.flatPlan}
+              alt="Floor Plan"
+              width={700}
+              height={500}
+            />
+          </div>
         </div>
 
         {/* ============right side ========= */}

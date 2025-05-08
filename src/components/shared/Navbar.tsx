@@ -17,7 +17,7 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const { data: session } = useSession(); // Get session data
-console.log(session?.user?.imageUrl, "user img data")
+  console.log(session?.user?.imageUrl, "user img data")
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
@@ -28,9 +28,9 @@ console.log(session?.user?.imageUrl, "user img data")
 
   useEffect(() => {
     const scrollBtn = document.querySelector("button.scroll-to-top") as HTMLElement;
-if (scrollBtn) {
-  scrollBtn.style.display = dropDownState ? "none" : "flex";
-}
+    if (scrollBtn) {
+      scrollBtn.style.display = dropDownState ? "none" : "flex";
+    }
 
     return () => {
       document.body.style.overflow = "auto";
@@ -54,11 +54,11 @@ if (scrollBtn) {
     { name: "Contact", path: "/contact" },
   ];
 
- 
+
 
   return (
     <nav
-      className={`section-padding-x fixed md:fixed lg:absolute z-30 w-full flex items-center justify-between bg-[#b2b2f1] pt-3 lg:container px-3 text-white left-1/2 transform -translate-x-1/2 ${scrolled ? "md:bg-[#b2b2f1] md:py-2" : "bg-transparent"
+      className={` sticky top-0 z-30 w-full flex items-center justify-between bg-[#b2b2f1] mx-auto px-14 py-4 text-white  ${scrolled ? "md:bg-[#b2b2f1] md:py-2" : "bg-transparent"
         }`}
       style={navbarStyles}
     >
@@ -84,7 +84,7 @@ if (scrollBtn) {
             >
               <Link href={path}>{name}</Link>
             </li>
-            
+
           );
         })}
 
@@ -129,9 +129,9 @@ if (scrollBtn) {
               Login
             </PrimaryButton></Link>
             <Link href="/register">
-            <SecondaryButton customClass="text-base font-semibold">
-              Sign up
-            </SecondaryButton></Link>
+              <SecondaryButton customClass="text-base font-semibold">
+                Sign up
+              </SecondaryButton></Link>
           </>
         )}
       </ul>
@@ -159,6 +159,57 @@ if (scrollBtn) {
           <line x1="4" x2="20" y1="18" y2="18" />
         </svg>
       </div>
+      {dropDownState && (
+        <div className="lg:hidden absolute top-[100%] left-0 w-full bg-[#b2b2f1] z-20 px-10 py-4 text-primary">
+          <ul className="flex flex-col gap-4">
+            {menuItems.map(({ name, path }) => (
+              <li key={name} onClick={() => setDropDownState(false)}>
+                <Link href={path} className={`block ${pathname === path ? "text-secondary" : ""}`}>
+                  {name}
+                </Link>
+              </li>
+            ))}
+
+            {session?.user && (
+              <>
+                <li>
+                  <Link href="/dashboard" onClick={() => setDropDownState(false)}>
+                    Dashboard
+                  </Link>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      setDropDownState(false);
+                      signOut();
+                    }}
+                    className="flex items-center gap-2 text-red-500"
+                  >
+                    <LogOut size={16} />
+                    Logout
+                  </button>
+                </li>
+              </>
+            )}
+
+            {!session && (
+              <>
+                <li>
+                  <Link href="/login" onClick={() => setDropDownState(false)}>
+                    <PrimaryButton customClass="w-full">Login</PrimaryButton>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/register" onClick={() => setDropDownState(false)}>
+                    <SecondaryButton customClass="w-full">Sign up</SecondaryButton>
+                  </Link>
+                </li>
+              </>
+            )}
+          </ul>
+        </div>
+      )}
+
     </nav>
   );
 };

@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
-import Btn from "../../assets/rental.png";
-import Image from "next/image";
+
+import { FaAngleDoubleUp } from "react-icons/fa";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 100) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -32,15 +32,9 @@ const ScrollToTopButton = () => {
     isVisible && (
       <button
         onClick={scrollToTop}
-        className="fixed bottom-28 right-4 hover:bg-secondary rounded-full border border-secondary w-[50px] h-[50px] transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+        className="fixed z-50 bottom-20 right-4 bg-white/40 hover:bg-white rounded-full border-2 border-primary w-[50px] h-[50px] transition-all duration-300 transform hover:scale-110 hover:shadow-lg flex items-center justify-center text-2xl text-primary"
       >
-        <Image
-          className="w-full h-full"
-          src={Btn}
-          alt="About_Top_button"
-          objectFit="cover"
-          objectPosition="center"
-        />
+        <FaAngleDoubleUp/>
       </button>
     )
   );

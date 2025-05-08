@@ -56,8 +56,8 @@ export default function FAQ() {
   return (
   <>
    {/* Hero Section */}
-<Hero img='https://i.ibb.co.com/B2t7HCvm/house4.jpg' title="FAQ"/>
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <Hero img='https://res.cloudinary.com/dfvvoq4ud/image/upload/v1746636198/house4_zyl64s.jpg' title="FAQ"/>
+    <div className="max-w-4xl mx-auto px-4 py-20">
       <h1 className="text-4xl font-bold text-center mb-10 text-gray-900 dark:text-white">
         Frequently Asked Questions
       </h1>
@@ -65,21 +65,21 @@ export default function FAQ() {
         {faqData.map((faq, index) => (
           <div
             key={index}
-            className="border-b border-gray-300 dark:border-gray-700 pb-2"
+            className="border-b border-gray-700 dark:border-gray-700 pb-2"
           >
             <button
               onClick={() => toggleFAQ(index)}
               className="w-full text-left flex justify-between items-center py-3 focus:outline-none"
             >
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+              <h3 className="text-xl font-semibold text-gray-800 ">
                 {faq.question}
               </h3>
-              <span className="text-xl text-gray-600 dark:text-gray-300">
+              <span className="text-xl text-gray-600 ">
                 {openIndex === index ? '−' : '+'}
               </span>
             </button>
             {openIndex === index && (
-              <p className="text-gray-600 dark:text-gray-400 mt-2 transition-all duration-300">
+              <p className="text-gray-600  mt-2 transition-all duration-300">
                 {faq.answer}
               </p>
             )}

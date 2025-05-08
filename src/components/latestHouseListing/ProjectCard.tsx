@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { MapPin, Bath, Bed, Ruler } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,15 +25,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   baths,
   sqft,
 }) => {
-  const [currentImage, setCurrentImage] = useState(0);
+  const currentImage = 0;
 
-  const handleNext = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
-  };
+  // const handleNext = () => {
+  //   setCurrentImage((prev) => (prev + 1) % images.length);
+  // };
 
-  const handlePrev = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
-  };
+  // const handlePrev = () => {
+  //   setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+  // };
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden w-full max-w-sm mx-auto mb-16">
@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </span>
 
         {/* Controls */}
-        {images.length > 1 && (
+        {/* {images.length > 1 && (
           <>
             <button
               onClick={handlePrev}
@@ -69,7 +69,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               ›
             </button>
           </>
-        )}
+        )} */}
       </div>
 
       <div className="p-4">

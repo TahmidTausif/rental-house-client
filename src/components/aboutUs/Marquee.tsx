@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 function logoMarquee() {
   return (
-    <section className="bg-gray-100 dark:bg-gray-800 py-10">
+    <section className="bg-white  py-10">
         <Marquee speed={40} gradient={false}>
           {Array(3)
             .fill([
@@ -20,7 +20,7 @@ function logoMarquee() {
                 src={`https://cdn-icons-png.flaticon.com/512/69/${id}.png`}
                 alt={`Icon ${i}`}
                 height={12}
-                width={34}
+                width={40}
                 className="h-12 mx-10"
               />
             ))}

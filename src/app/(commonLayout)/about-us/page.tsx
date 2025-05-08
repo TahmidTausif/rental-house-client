@@ -18,10 +18,10 @@ const AboutPage = () => {
   return (
     <div className="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
-    {/* Hero Section */}
+      {/* Hero Section */}
 
-    <Hero img='https://i.ibb.co.com/TDbMJ1Jz/house1.jpg' title="About US"/>
-    
+      <Hero img='https://i.ibb.co.com/TDbMJ1Jz/house1.jpg' title="About US" />
+
       {/* Our Story */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4">
@@ -40,22 +40,32 @@ const AboutPage = () => {
       {/* Horizontal Images */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-            alt="Modern rental apartment"
-            className="w-full h-64 object-cover rounded-lg shadow dark:border dark:border-gray-700"
-          />
-          <Image
-            src="https://images.unsplash.com/photo-1570129477492-45c003edd2be"
-            alt="Happy couple in rented home"
-            className="w-full h-64 object-cover rounded-lg shadow dark:border dark:border-gray-700"
-          />
-          <Image
-            src="https://images.unsplash.com/photo-1560518883-ce09059eeffa"
-            alt="Landlord meeting with tenant"
-            className="w-full h-64 object-cover rounded-lg shadow dark:border dark:border-gray-700"
-          />
+          <div className="relative h-64">
+            <Image
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+              alt="Modern rental apartment"
+              fill
+              className="object-cover rounded-lg shadow dark:border dark:border-gray-700"
+            />
+          </div>
+          <div className="relative h-64">
+            <Image
+              src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Happy couple in rented home"
+              fill
+              className="object-cover rounded-lg shadow dark:border dark:border-gray-700"
+            />
+          </div>
+          <div className="relative h-64">
+            <Image
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa"
+              alt="Landlord meeting with tenant"
+              fill
+              className="object-cover rounded-lg shadow dark:border dark:border-gray-700"
+            />
+          </div>
         </div>
+
       </section>
 
       {/* Advantages */}
@@ -87,10 +97,10 @@ const AboutPage = () => {
       </section>
 
       {/* Testimonials */}
-      <Testimonials/>
+      <Testimonials />
 
       {/* Logo Marquee */}
-      <Marquee/>
+      <Marquee />
 
       {/* Call-to-Action Section */}
       <section className="bg-blue-600 py-20 text-white dark:bg-blue-800">

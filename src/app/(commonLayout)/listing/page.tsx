@@ -74,7 +74,7 @@ const PropertyListingPage = () => {
               </div>
             ) : (
               <>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
                   {properties.map((property: any) => (
                     <PropertyCard key={property._id} {...property} />
                   ))}
@@ -97,7 +97,7 @@ const PropertyListingPage = () => {
                           key={pageNum}
                           className={`px-4 py-2 rounded ${
                             filters.page === pageNum
-                              ? "bg-red-500 text-white"
+                              ? "bg-secondary text-white"
                               : "bg-gray-200 hover:bg-gray-300"
                           }`}
                           onClick={() => handlePageChange(pageNum)}

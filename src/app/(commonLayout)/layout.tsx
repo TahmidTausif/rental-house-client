@@ -10,12 +10,11 @@ const CommonLayout = ({
 }>) => {
   return (
     <div>
-      <div className="container mx-auto pb-24 ">
-        <Navbar />
-      </div>
+      
+      <Navbar />
       <div>{children}</div>
       <Footer />
-      <ScrollToTopButton/>
+      <ScrollToTopButton />
     </div>
   );
 };

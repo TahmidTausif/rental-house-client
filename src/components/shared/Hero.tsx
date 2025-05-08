@@ -8,11 +8,12 @@ function Hero({img, title}:{img:string, title:string}) {
    <Image
      src={img}
      alt="Terms Hero"
+     fill
      className="w-full h-full object-cover absolute inset-0 z-0"
    />
 
    {/* Overlay with gradient for better dark mode support */}
-   <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/50 to-black/20" />
+   <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-black/40 to-transparent" />
 
    {/* Title Text */}
    <div className="absolute inset-0 z-20 flex items-center justify-center px-4">
