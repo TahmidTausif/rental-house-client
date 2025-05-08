@@ -3,6 +3,8 @@ import Link from "next/link";
 import SecondaryButton from "../shared/SecondaryButton";
 import { useSession } from "next-auth/react";
 import Swal from "sweetalert2";
+import SectionHeader from "../shared/SectionHeader";
+import PrimaryButton from "../shared/PrimaryButton";
 
 const JoinUsCTA = () => {
 
@@ -18,19 +20,20 @@ const JoinUsCTA = () => {
         }
     };
     return (
-        <section className="py-20 bg-gradient-to-r from-primary to-primary/80 text-white text-center">
+        <section className="py-20 bg-gray-50 text-white text-center">
             <div className="max-w-4xl mx-auto px-4">
-
-                <div className="flex flex-col mx-auto mb-10">
-                    <h2 className="text-lg text-white/90 font-bold mb-4">Ready to find your next home?</h2>
-                    <p className=" text-4xl font-bold">Join Rental House Today</p>
-                    
+                <div className="space-y-4 text-center mb-8">
+                    <SectionHeader
+                        title="Join Rental House Today"
+                        subtitle="READY TO FIND YOUR NEXT HOME ?"
+                    />
                 </div>
+                
                 <div className="flex justify-center gap-4 flex-wrap">
                     <Link href={"/register"}>
-                        <SecondaryButton className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-orange-100 transition">
+                        <PrimaryButton className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-orange-100 transition">
                             Sign Up as Tenant
-                        </SecondaryButton>
+                        </PrimaryButton>
                     </Link>
                     <Link href={session?.user?.role === "landlord" ? "/dashboard/landlord/add-listing" : "/register"}>
                         <SecondaryButton onClick={handleClick} className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-orange-100 transition">

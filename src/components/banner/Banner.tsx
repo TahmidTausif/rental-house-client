@@ -37,7 +37,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-[500px] overflow-hidden">
       {/* Swiper for background images only */}
       <Swiper
         spaceBetween={0}

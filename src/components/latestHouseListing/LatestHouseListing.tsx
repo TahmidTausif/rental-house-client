@@ -26,7 +26,7 @@ const LatestHouseListing = () => {
 
   return (
     <div>
-      <div className="space-y-4 text-center mb-8">
+      <div className="space-y-4 py-10 text-center mb-8">
         <SectionHeader
           title="Latest House Listings"
           subtitle="OUR PROPERTIES"

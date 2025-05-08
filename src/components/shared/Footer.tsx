@@ -43,10 +43,10 @@ function Footer() {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/30 px-6  text-gray-800 lg:w-11/12 mx-auto py-4">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/30 px-6  text-gray-800 lg:w-11/12 mx-auto py-6">
         <Link href="/" className="flex flex-col md:flex-row items-center gap-2">
           <Image src="/rental.png" alt="logo" width={60} height={40} className=" rounded-full bg-white/80" />
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-lg font-bold text-white bg-clip-text">
               Rental <span className="text-white">House</span> Ltd.
             </h3>

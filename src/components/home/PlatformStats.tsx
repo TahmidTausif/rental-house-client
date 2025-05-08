@@ -41,7 +41,7 @@ const isNumeric = (val: string) => /^[0-9]+$/.test(val.replace(/[, +]/g, ""));
 
 const PlatformStats = ({ stats = demoStats }: PlatformStatsProps) => {
   return (
-    <section className="py-10 pb-20 px-10 bg-white">
+    <section className="py-10 pb-20 px-10 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 text-center">
       <div className="space-y-4 text-center mb-8">
         <SectionHeader
